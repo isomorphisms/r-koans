@@ -1,0 +1,23 @@
+Package: tidyversekoans
+Title: Colleen O'Briant Teaches the Tidyverse
+Version: 0.0.0.9000
+Authors@R:
+    c(
+      person(given = "Colleen", family = "O'Briant", role = "aut"),
+      person(given = "ChatGPT", family = "OpenAI", role = "ctb",
+             comment = "Anthology reformatting, August 2026")
+    )
+Description: Twenty progressive R and tidyverse koans designed by Colleen
+    O'Briant, preserved in the isomorphisms/r-koans anthology. The exercises
+    move from vectors and tibbles through dplyr, joins, ggplot2, regression,
+    functions, purrr, lags, first differences, reduce, and accumulate.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Suggests:
+    testthat (>= 3.0.0),
+    tidyverse,
+    gapminder,
+    broom,
+    devtools
+Config/testthat/edition: 3
