@@ -5,6 +5,12 @@ library(testthat)
 
 local_edition(3)
 
+# Springate's 2017 koans use testthat's historical expectation DSL.
+# Current testthat still exports most of that API, but no longer exports
+# is_true(). This one-line compatibility definition preserves his original
+# exercise files without pretending they were written in the modern syntax.
+is_true <- function() testthat::equals(TRUE)
+
 koan_order <- c(
   "what_is_true.R",
   "on_calculations.R",
@@ -16,5 +22,5 @@ koan_order <- c(
 )
 
 for (koan in koan_order) {
-  test_file(file.path("koans", koan))
+  test_file(file.path("koans", koan), env = environment())
 }
