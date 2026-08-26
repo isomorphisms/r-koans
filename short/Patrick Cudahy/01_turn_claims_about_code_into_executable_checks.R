@@ -8,6 +8,9 @@
 # code and immediately find out whether the behavior you cared about survived.
 
 
+testthat::local_edition(3)
+
+
 testthat::test_that("a claim can be checked as true", {
     testthat::expect_true(`___`)
 })
