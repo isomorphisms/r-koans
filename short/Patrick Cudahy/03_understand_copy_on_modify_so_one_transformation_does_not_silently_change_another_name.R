@@ -8,6 +8,9 @@
 # x. Knowing when copies happen also helps explain memory use and performance.
 
 
+testthat::local_edition(3)
+
+
 testthat::test_that("modifying one binding separates it from the old object", {
     x <- c(1, 2, 3)
     y <- x
