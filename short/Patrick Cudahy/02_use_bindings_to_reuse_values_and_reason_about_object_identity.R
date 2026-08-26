@@ -9,6 +9,9 @@
 # when a later change will require a copy.
 
 
+testthat::local_edition(3)
+
+
 testthat::test_that("a name is bound to a value", {
     x <- c(1, 2, 3)
 
