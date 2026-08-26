@@ -1,8 +1,18 @@
-# Hadley Wickham teaches Advanced R
+# Hadley Wickham teaches how R's names, functions, environments, dispatch, and evaluation work
 
-## What is Advanced R?
+## Why learn this layer of R?
 
-**Advanced R** studies R as a programming language rather than just as a tool for analysis: names and values, vectors and subsetting, functions and environments, object systems, evaluation and metaprogramming, debugging, and performance.
+**Advanced R** studies R as a programming language rather than just as a tool for analysis. The point is not to collect obscure language facts. It is to become able to build your own reliable tools when the functions you were handed are no longer enough.
+
+The major subjects buy different capabilities:
+
+- **names, values, and copying** — know what assignment actually did, whether two names share an object, and when a transformation allocates something new
+- **vectors and subsetting** — define exactly what part of a data object an operation should act on
+- **functions and environments** — package behavior, control where names are looked up, and build functions that work with other functions
+- **object systems and dispatch** — teach a familiar generic verb what your own kind of object means; for example, define the natural plot for a new data type so callers can keep writing `plot(x)`
+- **evaluation and metaprogramming** — write interfaces that deliberately work with expressions and user-written code instead of treating evaluation rules as magic
+- **debugging** — find which assumption failed rather than guessing from the final error
+- **performance and memory** — identify where time and allocation are actually going before optimizing
 
 The motivation for a koan treatment is that these subjects are easiest to learn with very small experiments. A few lines of R can distinguish two competing mental models of binding, copying, dispatch, scoping, or evaluation.
 
@@ -12,7 +22,7 @@ The motivation for a koan treatment is that these subjects are easiest to learn 
 
 The upstream book is organized into foundations; functional programming; object-oriented programming; metaprogramming; and techniques/performance. See `SOURCE-MAP.md` for the chapter-level map used by this anthology.
 
-Patrick Cudahy's separate `advRkoans` collection in this repository explicitly follows _Advanced R_; his exercises remain credited to him, with Wickham credited as their antecedent.
+Patrick Cudahy's three `advRkoans`, grouped under `short/Patrick Cudahy/`, take only a narrow early slice of this territory: test expectations, bindings/object identity, and copy-on-modify. Cudahy's exercises are credited to Cudahy; Wickham is credited as the antecedent his project explicitly follows.
 
 ## Credit and reformatting
 

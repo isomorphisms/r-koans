@@ -1,24 +1,24 @@
-# Patrick Burns leads you through The R Inferno
+# Patrick Burns teaches how to spot plausible-looking R code that is wrong, slow, or surprising
 
-## What is The R Inferno?
+## What is The R Inferno for?
 
 **The R Inferno** is Patrick Burns's guide to common R programming traps, surprising behavior, performance mistakes, and debugging habits. It is especially koan-like because many of its lessons begin with code that looks obvious until R does something you did not expect.
 
-The motivation is to improve your mental model of R by studying the places where ordinary assumptions fail.
+The practical capability is distrust with reasons: learn the places where an apparently sensible program can give you the wrong numerical conclusion, waste large amounts of time or memory, mutate state you did not mean to touch, or behave differently from the mental model in your head. Then know what to inspect.
 
 ## The circles
 
-1. **Falling into the Floating Point Trap** — representation, equality, and numerical error.
-2. **Growing Objects** — the cost of repeatedly enlarging objects.
-3. **Failing to Vectorize** — vector operations, subscripting, and avoiding unnecessary loops.
-4. **Over-Vectorizing** — cases where forcing vectorization makes code worse.
-5. **Not Writing Functions** — abstraction and repeated code.
-6. **Doing Global Assignments** — hazards of changing nonlocal state.
-7. **Tripping on Object Orientation** — S3, S4, inheritance, dispatch, and namespaces.
-8. **Believing It Does as Intended** — coercion, matching, subscripting, factors, missing values, evaluation, and data import.
-9. **Unhelpfully Seeking Help** — investigating problems, documentation, reproducible examples, and asking useful questions.
+1. **Falling into the Floating Point Trap** — know when ordinary-looking numerical equality is not the question you actually mean to ask.
+2. **Growing Objects** — recognize when repeated resizing turns an otherwise simple computation into unnecessary allocation and copying.
+3. **Failing to Vectorize** — express operations over whole collections when that makes the computation clearer and faster.
+4. **Over-Vectorizing** — recognize the opposite failure: forcing a vectorized form when it obscures the job or makes it worse.
+5. **Not Writing Functions** — turn repeated reasoning into one operation you can name, test, and reuse.
+6. **Doing Global Assignments** — see when a computation changes state outside itself and therefore becomes harder to reason about.
+7. **Tripping on Object Orientation** — understand enough S3/S4 dispatch, inheritance, and namespaces to explain why a generic operation did what it did.
+8. **Believing It Does as Intended** — catch coercion, matching, subsetting, factors, missing values, evaluation, and data-import behavior before it becomes a false conclusion.
+9. **Unhelpfully Seeking Help** — reduce a confusing failure to evidence another person can reproduce and reason about.
 
-The chapter names follow Burns's table of contents; the one-line descriptions above are anthology summaries.
+The chapter names follow Burns's table of contents; the one-line descriptions above are anthology summaries of the capability each chapter is trying to build.
 
 ## Credit and copying
 
